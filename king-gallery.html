@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King Room Gallery - Pleasant Stay Motel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox.active {
+            display: flex;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body class="bg-stone-50">
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <a href="index.html" class="text-sky-900 hover:text-sky-700 font-medium transition-colors">← Back</a>
+                <h1 class="text-2xl font-semibold text-stone-900 tracking-tight">
+                    King Room Gallery
+                </h1>
+            </div>
+            <a href="tel:+19055161959" class="text-sky-900 hover:text-sky-700 font-medium transition-colors">
+                +1 905-516-1959
+            </a>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="pt-32 pb-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-light text-stone-900 mb-4">King Room</h2>
+                <p class="text-lg text-stone-700">Spacious room with a comfortable king-size bed and modern amenities</p>
+            </div>
+
+            <!-- Image Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="group cursor-pointer overflow-hidden bg-stone-200 aspect-[4/3]" onclick="openLightbox('public/images/king_size_room/DSC01912.jpeg')">
+                    <img src="public/images/king_size_room/DSC01912.jpeg" alt="King Room View 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="group cursor-pointer overflow-hidden bg-stone-200 aspect-[4/3]" onclick="openLightbox('public/images/king_size_room/DSC01915.jpeg')">
+                    <img src="public/images/king_size_room/DSC01915.jpeg" alt="King Room View 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="group cursor-pointer overflow-hidden bg-stone-200 aspect-[4/3]" onclick="openLightbox('public/images/king_size_room/DSC01922.jpeg')">
+                    <img src="public/images/king_size_room/DSC01922.jpeg" alt="King Room View 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="group cursor-pointer overflow-hidden bg-stone-200 aspect-[4/3]" onclick="openLightbox('public/images/king_size_room/DSC01918.jpeg')">
+                    <img src="public/images/king_size_room/DSC01918.jpeg" alt="King Room View 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="group cursor-pointer overflow-hidden bg-stone-200 aspect-[4/3]" onclick="openLightbox('public/images/king_size_room/DSC01920.jpeg')">
+                    <img src="public/images/king_size_room/DSC01920.jpeg" alt="King Room View 5" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+                <div class="group cursor-pointer overflow-hidden bg-stone-200 aspect-[4/3]" onclick="openLightbox('public/images/king_size_room/DSC01907.jpeg')">
+                    <img src="public/images/king_size_room/DSC01907.jpeg" alt="King Room View 6" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+
+            <!-- Book Now CTA -->
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-light text-stone-900 mb-6">Ready to Book This Room?</h3>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://www.booking.com/hotel/ca/pleasant-stay-motel.html?aid=311088&label=pleasant-stay-motel-vYi63cmaAGE9O_UhMWMArQS166183255113%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg%3Afi%3Atikwd-3743302326%3Alp9073497%3Ali%3Adec%3Adm%3Appccp%3DUmFuZG9tSVYkc2RlIyh9YXdX6HrtnYy-XcOKkQlADBY&sid=2dd263b9f346d37161549b0d046f8fde&dest_id=900049543&dest_type=city&dist=0&group_adults=2&group_children=0&hapos=1&hpos=1&no_rooms=1&req_adults=2&req_children=0&room1=A%2CA&sb_price_type=total&sr_order=popularity&srepoch=1768004852&srpvid=aece8e81ddc1f641518182456b8681cf&type=total&ucfs=1&"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="bg-sky-900 hover:bg-sky-800 text-white px-10 py-3 rounded-sm text-lg font-medium transition-all shadow-lg hover:shadow-xl">
+                        Book on Booking.com
+                    </a>
+                    <a href="tel:+19055161959"
+                       class="border-2 border-stone-900 hover:bg-stone-900 hover:text-white text-stone-900 px-10 py-3 rounded-sm text-lg font-medium transition-all">
+                        Call +1 905-516-1959
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full size image">
+        <button onclick="closeLightbox()" class="absolute top-8 right-8 text-white text-4xl hover:text-stone-300 transition-colors">&times;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-stone-900 text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h4 class="text-xl font-semibold mb-4">Pleasant Stay Motel</h4>
+                    <p class="text-stone-400">
+                        Your trusted accommodation near Hamilton, Ontario
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Location</h5>
+                    <p class="text-stone-400">
+                        2692 2, Alberton, ON<br>
+                        L0R 1A0, Canada
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-semibold mb-4">Contact</h5>
+                    <p class="text-stone-400">
+                        Phone: <a href="tel:+19055161959" class="hover:text-white transition-colors">+1 905-516-1959</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-t border-stone-800 pt-8 text-center text-stone-500">
+                <p>&copy; 2026 Pleasant Stay Motel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function openLightbox(imgSrc) {
+            document.getElementById('lightbox').classList.add('active');
+            document.getElementById('lightbox-img').src = imgSrc;
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // Close lightbox on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+</html>
